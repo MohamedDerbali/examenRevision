@@ -1,0 +1,15 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+	<h1>Authentification - Examen Node JS</h1>
+	<form method="post" action="http://localhost:3000/users">
+  
+		<label>email</label>
+		<input type="text" name="email"/><br>
+		<label>password</label>
+		<input type="password" name="password"/><br>
+    
+		<button type="submit">se connecter</button>
+
+	</form>
+{% endblock %}

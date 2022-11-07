@@ -1,0 +1,21 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+notifications 
+<div id="notification">
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+ <script src="/socket.io/socket.io.js"></script>
+ <script>
+    var socket = io('http://localhost:3000');
+    socket.on('notification', function(data){
+      var id= document.getElementById('notification');
+        id.innerHTML = data;
+    });
+  </script>
+
+{% endblock %}
